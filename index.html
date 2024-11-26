@@ -35,8 +35,8 @@
             </div>
             <p>Latest HeavyGL Version: <span id="api-version">loading...</span></p>
             <div class="button-board">
-                <button class="download fade-down-anim">Download</button>
-                <button class="insider fade-down-anim">Download Insider</button>
+                <button class="download fade-down-anim" id="download-btn">Download</button>
+                <button class="insider fade-down-anim"  id="insider-btn">Download Insider</button>
             </div>
         </aside>
     </main>
@@ -66,6 +66,8 @@
     const api = {
         version: () => 'b1.2.0',
         getp: () => '1%',
+        website: () => "https://heavygl.github.io",
+        github: () => "https://github.com/HeavyGL/heavygl"
     };
 
     const dpp = document.querySelector("#dev-progress-percentage");
@@ -76,6 +78,15 @@
 
     const apiVersionDOM = document.querySelector("#api-version");
     apiVersionDOM.innerText = api.version();
+
+    const downloadbtn = document.querySelector("#download-btn");
+    const insiderbtn = document.querySelector("#insider-btn");
+    const gotoGithub = () => {
+        window.location.href = api.github();
+    };
+
+    downloadbtn.addEventListener('click', gotoGithub);
+    insiderbtn.addEventListener('click', gotoGithub);
 
 </script>
 
