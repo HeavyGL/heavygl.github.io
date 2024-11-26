@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import url("./container.css");
+@import url("./rightpanel.css");
+@import url('./buttons.css');
+@import url("./hero.css");
+
+/* Font */
+
+@font-face {
+  font-family: 'Modern Sans';
+  src: url('../fonts/modernsans.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Modern Sans';
+  src: url('../fonts/modernsansitalic.woff2') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  background: #1a1d24;
+  overflow-x: hidden;
+}
+
+footer {
+  background: #1a1d24;
+  padding: 10px;
+  text-align: center;
+  color: #b3b3b3;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+blockquote {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 4px solid #333;
+  margin-bottom: 5px;
+}

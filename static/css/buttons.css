@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.button-board {
+  display: flex;
+  gap: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+button {
+  /* Reset button original appearance */
+  appearance: none;
+  border: none;
+
+  font-family: inherit;
+  color: auto;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+button.download {
+  /* Some cute light background */
+  background: #00cc66;
+  color: white;
+
+  /* Font */
+  font-family: inherit;
+  font-weight: bold;
+}
+
+button.insider {
+  background: #995c00;
+  color: #dfdbdb;
+}
+
+button.download:hover {
+  background: #009900;
+}
+
+button.insider:hover {
+  background: #cc7700;
+}

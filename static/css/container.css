@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+section {
+  padding: 15px;
+  background-color: #0c0e11;
+  max-width: 59%;
+  border-radius: 5px;
+}
+
+section h2 {
+  margin-bottom: 7px;
+}

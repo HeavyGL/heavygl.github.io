@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | HeavyGL | Cross platform graphics specification</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <img draggable="false" src="static/img/logo.png" id="hero-logo" /><br />
+        <p><i>OpenGL done right 🚀</i></p>
+    </header>
+
+    <main>
+        <section class="fade-down-anim">
+            <h2>Overview</h2>
+
+            <p>HeavyGL is a graphic specification <small>(or Graphic API)</small> that can be used
+                for cross-platform purposes. At the moment, this library isn't completed yet, we are just experiment
+                with some basics before we can start implementing the library itself.</p><br />
+
+            <p><b>Sincerely, Ciro <abbr title="Alejo">A.</abbr> Diaz Ferraris</b></p>
+        </section>
+
+        <aside class="right-panel">
+            <div style="display: flex; gap: 7px;">
+                <h3>Development Status</h3><sub id="dev-progress-percentage">0%</sub>
+            </div>
+
+            <div class="progress-wrapper">
+                <div class="progress" id="dev-progress-dom" style="width: 1%;"></div>
+            </div>
+            <p>Latest HeavyGL Version: <span id="api-version">loading...</span></p>
+            <div class="button-board">
+                <button class="download fade-down-anim">Download</button>
+                <button class="insider fade-down-anim">Download Insider</button>
+            </div>
+        </aside>
+    </main>
+</body>
+
+<script>
+    /* Animations */
+    document.addEventListener('DOMContentLoaded', () => {
+        const targets = document.querySelectorAll(".fade-down-anim");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-down-anim-now');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        targets.forEach(target => observer.observe(target));
+    });
+
+    const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile())
+        alert("Probably this page won't work in mobile devices. Thanks for visiting tho");
+
+    const api = {
+        version: () => 'b1.2.0',
+        getp: () => '1%',
+    };
+
+    const dpp = document.querySelector("#dev-progress-percentage");
+    dpp.innerText = api.getp();
+
+    const progressDOM = document.querySelector("#dev-progress-dom");
+    progressDOM.style.width = api.getp();
+
+    const apiVersionDOM = document.querySelector("#api-version");
+    apiVersionDOM.innerText = api.version();
+
+</script>
+
+</html>
