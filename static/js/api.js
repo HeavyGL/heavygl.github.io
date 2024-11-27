@@ -6,7 +6,7 @@ const api = {
     version: () => 'b1.2.0',
     getp: () => '1%',
     website: () => "https://heavygl.github.io",
-    github: () => "https://github.com/HeavyGL/heavygl"
+    github: () => "https://github.com/HeavyGL/"
 };
 
 const dpp = document.querySelector("#dev-progress-percentage");
