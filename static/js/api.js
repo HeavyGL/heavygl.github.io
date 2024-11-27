@@ -4,6 +4,7 @@ if (isMobile())
 
 const api = {
     version: () => 'b1.2.0',
+    nversion: () => 'c1.2.0',
     getp: () => '1%',
     website: () => "https://heavygl.github.io",
     github: () => "https://github.com/HeavyGL/"
@@ -17,6 +18,9 @@ progressDOM.style.width = api.getp();
 
 const apiVersionDOM = document.querySelector("#api-version");
 apiVersionDOM.innerText = api.version();
+
+const apiNextVerDOM = document.querySelector("#api-next-version");
+apiNextVerDOM.innerText = api.nversion();
 
 const downloadbtn = document.querySelector("#download-btn");
 const insiderbtn = document.querySelector("#insider-btn");
